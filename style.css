@@ -1,5 +1,11 @@
+
+body{
+  background-color: rgb(71, 71, 96);
+}
+
 .board {
     position: relative;
+    background-color: antiquewhite;
     width: 550px; /* Фиксированная ширина 'board' */
     height: 550px; /* Фиксированная высота 'board' */
     border: 1px solid #000; /* Для наглядности */
@@ -10,11 +16,11 @@
   
   .cell {
     box-sizing: border-box;
-    background-color: red;
     aspect-ratio: 1; /* Поддерживаем соотношение сторон 1:1 */
     width: 100%; /* 100% ширины родительской ячейки */
     height: 100%; /* 100% высоты родительской ячейки */
   }
   .active__cell{
-    background-color: blue;
+    background-color: rgb(23, 23, 37);
   }
+
