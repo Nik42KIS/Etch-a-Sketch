@@ -1,16 +1,39 @@
+
+
 function setCellSize(cellSize) {
     const board = document.getElementById('board');
     const cols = Math.floor(board.clientWidth / cellSize);
     const rows = Math.floor(board.clientHeight / cellSize);
-    
+    let flag = false;
     board.innerHTML = ''; // Очищаем содержимое 'board'
   
     // Создаем и добавляем ячейки
     for (let i = 0; i < cols * rows; i++) {
       const cell = document.createElement('div');
       cell.classList.add('cell');
+        cell.addEventListener('mousedown', (e)=>{
+          
+            cell.classList.add('active__cell')
+            flag = true
+        })
+        cell.addEventListener('mouseup', ()=>{
+          flag = false
+        })
+
+        cell.addEventListener('mouseover', ()=>{
+          if(flag){
+            cell.classList.add('active__cell')
+          }
+        })
+
       board.appendChild(cell);
+
+
+     
+      
     }
+
+    
     
     board.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
     board.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
@@ -27,4 +50,5 @@ function setCellSize(cellSize) {
   } else {
     alert('Пожалуйста, введите корректное число от 1 до 100.');
   }
+  
   
