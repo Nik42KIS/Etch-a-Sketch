@@ -1,19 +1,19 @@
-const slider = document.querySelector('.slider');
+
 
 function setCellSize(cellSize) {
     const board = document.getElementById('board');
-
+    const clearButton = document.querySelector('clear_button')
+    // let colorCell = document.querySelector('color_input').value;
     const cols = Math.floor(board.clientWidth / cellSize);
     const rows = Math.floor(board.clientHeight / cellSize);
     let flag = false;
     board.innerHTML = ''; // Очищаем содержимое 'board'
-  
     // Создаем и добавляем ячейки
     for (let i = 0; i < cols * rows; i++) {
       const cell = document.createElement('div');
       cell.classList.add('cell');
         cell.addEventListener('mousedown', (e)=>{
-          
+          // cell.style.background(colorCell)
             cell.classList.add('active__cell')
             flag = true
         })
@@ -40,6 +40,8 @@ function setCellSize(cellSize) {
     board.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
   }
 
+
+setCellSize(20)
 
   // // Запросите размер ячейки с помощью prompt
   // const cellSizeInput = prompt('Введите размер ячейки (не более 100px):');

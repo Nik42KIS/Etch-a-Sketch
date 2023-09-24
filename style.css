@@ -20,7 +20,7 @@ body{
     width: 100%; /* 100% ширины родительской ячейки */
     height: 100%; /* 100% высоты родительской ячейки */
   }
-  .active__cell{
-    background-color: rgb(23, 23, 37);
-  }
 
+  .active__cell{
+    background-color: blueviolet;
+  }
