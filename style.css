@@ -1,0 +1,18 @@
+.board {
+    position: relative;
+    width: 600px; /* Фиксированная ширина 'board' */
+    height: 600px; /* Фиксированная высота 'board' */
+    border: 1px solid #000; /* Для наглядности */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Создаем грид с квадратными ячейками */
+    grid-gap: 0; /* Убираем пробелы между ячейками */
+  }
+  
+  .cell {
+    box-sizing: border-box;
+    background-color: red;
+    aspect-ratio: 1; /* Поддерживаем соотношение сторон 1:1 */
+    width: 100%; /* 100% ширины родительской ячейки */
+    height: 100%; /* 100% высоты родительской ячейки */
+  }
+  
