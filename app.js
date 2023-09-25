@@ -16,7 +16,8 @@ function setCellSize(cellSize) {
         cell.addEventListener('mousedown', (e)=>{
           // cell.style.background(colorCell)
             // cell.classList.add('active__cell')
-            cell.style.background = e.target.value
+            cell.style.background = colorCell.value
+            console.log(e)
             flag = true
         })
         cell.addEventListener('mouseup', ()=>{
@@ -25,7 +26,8 @@ function setCellSize(cellSize) {
 
         cell.addEventListener('mouseover', ()=>{
           if(flag){
-            cell.classList.add('active__cell')
+            cell.style.background = colorCell.value
+            // cell.classList.add('active__cell')
           }
         })
 
