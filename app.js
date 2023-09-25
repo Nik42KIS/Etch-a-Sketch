@@ -2,19 +2,21 @@
 
 function setCellSize(cellSize) {
     const board = document.getElementById('board');
-    const clearButton = document.querySelector('clear_button')
-    // let colorCell = document.querySelector('color_input').value;
+    let clearButton = document.querySelector('.clear_button')
+    let colorCell = document.querySelector('.color_input')
     const cols = Math.floor(board.clientWidth / cellSize);
     const rows = Math.floor(board.clientHeight / cellSize);
     let flag = false;
-    board.innerHTML = ''; // Очищаем содержимое 'board'
-    // Создаем и добавляем ячейки
+    board.innerHTML = ''; 
+
+    
     for (let i = 0; i < cols * rows; i++) {
       const cell = document.createElement('div');
       cell.classList.add('cell');
         cell.addEventListener('mousedown', (e)=>{
           // cell.style.background(colorCell)
-            cell.classList.add('active__cell')
+            // cell.classList.add('active__cell')
+            cell.style.background = e.target.value
             flag = true
         })
         cell.addEventListener('mouseup', ()=>{
@@ -38,6 +40,11 @@ function setCellSize(cellSize) {
     
     board.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
     board.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
+
+    clearButton.addEventListener('click', ()=>{
+      board.innerHTML = ''; 
+      setCellSize(20)
+    })
   }
 
 

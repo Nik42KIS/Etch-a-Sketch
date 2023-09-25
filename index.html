@@ -5,23 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-a-Sketch</title>
     <link rel="stylesheet" href="style.css">
-    <script src="app.js" defer></script>
+  
 </head>
 <body>
     <header>
         <h1>Etch-a-Sketch</h1>
     </header>
     <main>
-        <div id="board" class="board"></div>
         <button class="clear_button">Clear</button>
-        <input type="range" min="5" max="100" value="20"  oninput="setCellSize(value)" class="slider" >
         <div class="color_choose">
             <input class="color_input" type="color" id="color" name="color" value="#e66465" />
             <label for="color">Edit color</label>
         </div>
+        <input type="range" min="5" max="100" value="20"  oninput="setCellSize(value)" class="slider" >
+        <div id="board" class="board"></div>
+
+        
+       
     </main>
     <footer>
 
     </footer>
 </body>
+<script src="app.js" defer></script>
 </html>
