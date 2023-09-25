@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch-a-Sketch</title>
-    <link rel="stylesheet" href="style.css">
-  
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <h1>Etch-a-Sketch</h1>
+      <h1>Etch-a-Sketch</h1>
     </header>
     <main>
+      <div class="controllers">
         <button class="clear_button">Clear</button>
         <div class="color_choose">
-            <input class="color_input" type="color" id="color" name="color" value="#e66465" />
-            <label for="color">Edit color</label>
+          <input class="color_input" type="color" id="color" name="color" value="#002e9b" />
+          <label for="color">Edit color</label>
         </div>
-        <input type="range" min="5" max="100" value="20"  oninput="setCellSize(value)" class="slider" >
-        <div id="board" class="board"></div>
-
-        
+        <input
+          type="range"
+          min="5"
+          max="100"
+          value="20"
+          oninput="setCellSize(value)"
+          class="slider" />
        
+      </div>
+      <div id="board" class="board"></div>
     </main>
-    <footer>
-
-    </footer>
-</body>
-<script src="app.js" defer></script>
+  </body>
+  <script src="app.js" defer></script>
 </html>
